@@ -1,0 +1,42 @@
+package day4;
+
+// Class containing overloaded methods
+class Calculator {
+
+    // 1. Same name, different number of parameters
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // 2. Same name, different types of parameters
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    // 3. Same name, different order of parameters
+    String add(String a, int b) {
+        return a + b;
+    }
+
+    String add(int b, String a) {
+        return b + a;
+    }
+}
+
+// Main class
+public class MethodOverloading {
+
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+
+        System.out.println(calc.add(10, 20));         // calls int add(int,int)
+        System.out.println(calc.add(10, 20, 30));     // calls int add(int,int,int)
+        System.out.println(calc.add(10.5, 20.5));     // calls double add(double,double)
+        System.out.println(calc.add("Result: ", 5));  // calls add(String,int)
+        System.out.println(calc.add(5, " is the answer")); // calls add(int,String)
+    }
+}

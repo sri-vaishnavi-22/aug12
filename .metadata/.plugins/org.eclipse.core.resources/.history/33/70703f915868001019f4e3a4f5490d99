@@ -1,0 +1,54 @@
+package day3;
+
+public class CombinedExample {
+
+    // ===============================
+    // Part 1: Single Dimensional Array Usage
+    // ===============================
+    static void showNames() {
+        // Previously unused array
+        String[] names = {"Alice", "Bob", "Charlie"};
+
+        // ✅ Now using the array (printing)
+        System.out.println("---- Names in Array ----");
+        for (String n : names) {
+            System.out.println(n);
+        }
+    }
+
+    // ===============================
+    // Part 2: GC Object Usage
+    // ===============================
+    static class GC {
+        void showMessage() {
+            System.out.println("Object created: " + this);
+        }
+    }
+
+    static void createObjects() {
+        // Previously unused objects
+        GC obj = new GC();
+        GC obj4 = new GC();
+
+        // ✅ Now we use them
+        obj.showMessage();
+        obj4.showMessage();
+
+        // Or just print references
+        System.out.println("Object 1 reference: " + obj);
+        System.out.println("Object 2 reference: " + obj4);
+    }
+
+    // ===============================
+    // Main Method
+    // ===============================
+    public static void main(String[] args) {
+
+        // Use single dimensional array
+        showNames();
+
+        // Use GC objects
+        createObjects();
+    }
+}
+

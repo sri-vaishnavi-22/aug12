@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class Payment {
+    void pay() {
+        System.out.println("Processing payment...");
+    }
+}
+
+class CreditCard extends Payment {
+    @Override
+    void pay() {
+        System.out.println("Payment done through Credit Card");
+    }
+}
+
+class UPI extends Payment {
+    @Override
+    void pay() {
+        System.out.println("Payment done through UPI");
+    }
+}
+
+class NetBanking extends Payment {
+    @Override
+    void pay() {
+        System.out.println("Payment done through Net Banking");
+    }
+}
+
+public class paymentDemo {
+    public static void main(String[] args) {
+        Payment p1 = new CreditCard();
+        p1.pay();
+
+        Payment p2 = new UPI();
+        p2.pay();
+
+        Payment p3 = new NetBanking();
+        p3.pay();
+    }
+}

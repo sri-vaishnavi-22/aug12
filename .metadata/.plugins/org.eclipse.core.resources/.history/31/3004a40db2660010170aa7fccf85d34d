@@ -1,0 +1,24 @@
+package corejava;
+
+public class Methodsanddatatypes {
+	
+
+	    // A method that prints student details
+	    void showInfo() {
+	        System.out.println("=== Student Information ===");
+	        System.out.println("Name: Vaishnavi");
+	        System.out.println("Age: 22");
+	        System.out.println("Department: Electronics and Telecommunications");
+	        System.out.println("Grade: 8.9");
+	    }
+
+	    public static void main(String[] args) {
+	        // Create an object of the class
+	    	Methodsanddatatypes s = new Methodsanddatatypes();
+	        // Call the method to display details
+	        s.showInfo();
+	    }
+	}
+
+
+}
