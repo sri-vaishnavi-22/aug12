@@ -1,8 +1,0 @@
-package corejava;
-
-public class Datatypes {
-	//Boolean
-	boolean b1= false
-			System.out.println(b1);
-
-}
